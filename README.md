@@ -47,6 +47,3 @@ solve this.
 Do not forget to connect the address pin as you cannot read the sensor
 in a reliable way. As the line will float it will sometimes have the
 right address and sometimes not. (been there ;)
-
-
-

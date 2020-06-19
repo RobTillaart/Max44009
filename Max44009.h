@@ -1,13 +1,9 @@
 #pragma once
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																		//
 //    FILE: Max44009.h
 //  AUTHOR: Rob dot Tillaart at gmail dot com
-// VERSION: 0.4.1
+// VERSION: 0.4.2
 // PURPOSE: library for MAX44009 lux sensor Arduino
 // HISTORY: See Max440099.cpp
-//
-// Released to the public domain
-//
 
 //  breakout MAX44009 / GY-49
 //
@@ -32,7 +28,7 @@
 #include "Wire.h"
 #include "Arduino.h"
 
-#define MAX44009_LIB_VERSION        "0.4.1"
+#define MAX44009_LIB_VERSION        "0.4.2"
 #define MAX44009_DEFAULT_ADDRESS    0x4A
 #define MAX44009_ALT_ADDRESS        0x4B
 
