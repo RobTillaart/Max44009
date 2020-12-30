@@ -1,4 +1,8 @@
 
+[![Arduino CI](https://github.com/RobTillaart/MAX44009/workflows/Arduino%20CI/badge.svg)](https://github.com/marketplace/actions/arduino_ci)
+[![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/RobTillaart/MAX44009/blob/master/LICENSE)
+[![GitHub release](https://img.shields.io/github/release/RobTillaart/MAX44009.svg?maxAge=3600)](https://github.com/RobTillaart/MAX44009/releases)
+
 # MAX44009 I2C LUX sensor
 
 ## Description
@@ -6,6 +10,10 @@ a.k.a. GY-49
 
 The MAX44009 ambient light sensor is an I2C sensor, that has a 22 bit 
 dynamic range from 0.045 lux to 188,000 lux.
+
+## Interface
+
+TODO
 
 ## Examples
 
@@ -40,6 +48,7 @@ dynamic range from 0.045 lux to 188,000 lux.
 ```
 
 ## Notes
+
 Please be aware this is a 3.3 Volt device so it should not be connected
 to an Arduino or other 5 Volt device directly. Use a level convertor to 
 solve this.
