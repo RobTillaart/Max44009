@@ -68,8 +68,8 @@ unittest(test_constructor)
   Max44009 LuxA(0x4A);
   Wire.begin();
 
-  assertEqual(MAX44009_OK, luxA.getError());
-  assertTrue(luxA.isConnected());   // TODO should be false...
+  assertEqual(MAX44009_OK, LuxA.getError());
+  assertTrue(LuxA.isConnected());   // TODO should be false...
 
   // TODO more tests if WIRE works...
 }
