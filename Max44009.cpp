@@ -40,9 +40,9 @@
 Max44009::Max44009(const uint8_t address, const uint8_t dataPin, const uint8_t clockPin)
 {
   _address = address;
-  _data = 0;
-  _error = MAX44009_OK;
-  _wire = &Wire;
+  _data    = 0;
+  _error   = MAX44009_OK;
+  _wire    = &Wire;
 
   if ((dataPin < 255) && (clockPin < 255))
   {
@@ -66,9 +66,9 @@ Max44009::Max44009(const Boolean begin)
 void Max44009::configure(const uint8_t address, TwoWire *wire, const Boolean begin)
 {
   _address = address;
-  _data = 0;
-  _error = MAX44009_OK;
-  _wire = wire;
+  _data    = 0;
+  _error   = MAX44009_OK;
+  _wire    = wire;
 
   if (begin == Boolean::True)
   {
@@ -76,12 +76,14 @@ void Max44009::configure(const uint8_t address, TwoWire *wire, const Boolean beg
   }
 }
 
+
 bool Max44009::isConnected()
 {
   _wire->beginTransmission(_address);
   _error = _wire->endTransmission();
   return (_error == 0);
 }
+
 
 float Max44009::getLux(void)
 {
@@ -109,6 +111,7 @@ float Max44009::getLux(void)
   return val;
 }
 
+
 int Max44009::getError()
 {
   int e = _error;
@@ -116,45 +119,54 @@ int Max44009::getError()
   return e;
 }
 
+
 void Max44009::setHighThreshold(const float value)
 {
   setThreshold(MAX44009_THRESHOLD_HIGH, value);
 }
+
 
 float Max44009::getHighThreshold(void)
 {
   return getThreshold(MAX44009_THRESHOLD_HIGH);
 }
 
+
 void Max44009::setLowThreshold(const float value)
 {
   setThreshold(MAX44009_THRESHOLD_LOW, value);
 }
+
 
 float Max44009::getLowThreshold(void)
 {
   return getThreshold(MAX44009_THRESHOLD_LOW);
 }
 
+
 void Max44009::setThresholdTimer(const uint8_t value)
 {
   write(MAX44009_THRESHOLD_TIMER, value);
 }
+
 
 uint8_t Max44009::getThresholdTimer()
 {
   return read(MAX44009_THRESHOLD_TIMER);
 }
 
+
 void Max44009::setConfiguration(const uint8_t value)
 {
   write(MAX44009_CONFIGURATION, value);
 }
 
+
 uint8_t Max44009::getConfiguration()
 {
   return read(MAX44009_CONFIGURATION);
 }
+
 
 void Max44009::setAutomaticMode()
 {
@@ -164,6 +176,7 @@ void Max44009::setAutomaticMode()
   write(MAX44009_CONFIGURATION, config);
 }
 
+
 void Max44009::setContinuousMode()
 {
   uint8_t config = read(MAX44009_CONFIGURATION);
@@ -171,12 +184,14 @@ void Max44009::setContinuousMode()
   write(MAX44009_CONFIGURATION, config);
 }
 
+
 void Max44009::clrContinuousMode()
 {
   uint8_t config = read(MAX44009_CONFIGURATION);
   config &= ~MAX44009_CFG_CONTINUOUS;
   write(MAX44009_CONFIGURATION, config);
 }
+
 
 void Max44009::setManualMode(uint8_t CDR, uint8_t TIM)
 {
@@ -188,6 +203,7 @@ void Max44009::setManualMode(uint8_t CDR, uint8_t TIM)
   config |= CDR << 3 | TIM;           // set new CDR & TIM bits
   write(MAX44009_CONFIGURATION, config);
 }
+
 
 ///////////////////////////////////////////////////////////
 //
@@ -208,6 +224,7 @@ void Max44009::setThreshold(const uint8_t reg, const float value)
   write(reg, e | m);
 }
 
+
 float Max44009::getThreshold(uint8_t reg)
 {
   uint8_t data = read(reg);
@@ -217,6 +234,7 @@ float Max44009::getThreshold(uint8_t reg)
   float val = m * 0.045;
   return val;
 }
+
 
 uint8_t Max44009::read(uint8_t reg)
 {
@@ -235,6 +253,7 @@ uint8_t Max44009::read(uint8_t reg)
   _data = _wire->read();
   return _data;
 }
+
 
 void Max44009::write(uint8_t reg, uint8_t value)
 {

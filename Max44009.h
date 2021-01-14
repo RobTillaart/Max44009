@@ -1,4 +1,5 @@
 #pragma once
+
 //    FILE: Max44009.h
 //  AUTHOR: Rob dot Tillaart at gmail dot com
 // VERSION: 0.4.3
@@ -25,12 +26,15 @@
 // connect to an LED or an interrupt pin of an Arduino
 //
 
+
 #include "Wire.h"
 #include "Arduino.h"
 
-#define MAX44009_LIB_VERSION        "0.4.3"
+
+#define MAX44009_LIB_VERSION        (F("0.4.3"))
 #define MAX44009_DEFAULT_ADDRESS    0x4A
 #define MAX44009_ALT_ADDRESS        0x4B
+
 
 // REGISTERS
 #define MAX44009_INTERRUPT_STATUS   0x00
@@ -42,11 +46,13 @@
 #define MAX44009_THRESHOLD_LOW      0x06
 #define MAX44009_THRESHOLD_TIMER    0x07
 
+
 // CONFIGURATION MASKS
 #define MAX44009_CFG_CONTINUOUS     0x80
 #define MAX44009_CFG_MANUAL         0x40
 #define MAX44009_CFG_CDR            0x08
 #define MAX44009_CFG_TIMER          0x07
+
 
 // ERROR CODES
 #define MAX44009_OK                     0
