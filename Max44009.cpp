@@ -195,7 +195,7 @@ void Max44009::clrContinuousMode()
 
 void Max44009::setManualMode(uint8_t CDR, uint8_t TIM)
 {
-  if (CDR !=0) CDR = 1;
+  if (CDR !=0) CDR = 1;    // only 0 or 1 
   if (TIM > 7) TIM = 7;
   uint8_t config = read(MAX44009_CONFIGURATION);
   config |= MAX44009_CFG_MANUAL;
