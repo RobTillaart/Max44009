@@ -87,11 +87,11 @@ public:
   int     getError();
 
   // threshold must be between 0 and 188006
-  bool    setHighThreshold(const float);       // returns false if value out of range
+  bool    setHighThreshold(const float value);       // returns false if value out of range
   float   getHighThreshold(void);
-  bool    setLowThreshold(const float);        // returns false if value out of range
+  bool    setLowThreshold(const float value);        // returns false if value out of range
   float   getLowThreshold(void);
-  void    setThresholdTimer(const uint8_t);    // 2 seems practical minimum
+  void    setThresholdTimer(const uint8_t value);    // 2 seems practical minimum
   uint8_t getThresholdTimer();
 
   void    enableInterrupt()    { write(MAX44009_INTERRUPT_ENABLE, 1); };
@@ -124,11 +124,11 @@ public:
 
 
 private:
-  bool    setThreshold(uint8_t, float);
-  float   getThreshold(uint8_t);
+  bool    setThreshold(uint8_t reg, float value);
+  float   getThreshold(uint8_t reg);
 
   uint8_t read(uint8_t reg);
-  void    write(uint8_t, uint8_t);
+  void    write(uint8_t reg, uint8_t value);
 
   uint8_t _address;
   uint8_t _data;
@@ -139,3 +139,4 @@ private:
 
 
 // -- END OF FILE --
+
