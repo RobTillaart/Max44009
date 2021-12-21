@@ -2,7 +2,7 @@
 
 //    FILE: Max44009.h
 //  AUTHOR: Rob dot Tillaart at gmail dot com
-// VERSION: 0.5.0
+// VERSION: 0.5.1
 // PURPOSE: library for MAX44009 lux sensor Arduino
 // HISTORY: See Max440099.cpp
 
@@ -32,36 +32,36 @@
 #include "Arduino.h"
 
 
-#define MAX44009_LIB_VERSION        (F("0.5.0"))
+#define MAX44009_LIB_VERSION                  (F("0.5.1"))
 
-#define MAX44009_DEFAULT_ADDRESS    0x4A
-#define MAX44009_ALT_ADDRESS        0x4B
+#define MAX44009_DEFAULT_ADDRESS              0x4A
+#define MAX44009_ALT_ADDRESS                  0x4B
 
 
 // REGISTERS
-#define MAX44009_INTERRUPT_STATUS   0x00
-#define MAX44009_INTERRUPT_ENABLE   0x01
-#define MAX44009_CONFIGURATION      0x02
-#define MAX44009_LUX_READING_HIGH   0x03
-#define MAX44009_LUX_READING_LOW    0x04
-#define MAX44009_THRESHOLD_HIGH     0x05
-#define MAX44009_THRESHOLD_LOW      0x06
-#define MAX44009_THRESHOLD_TIMER    0x07
+#define MAX44009_INTERRUPT_STATUS             0x00
+#define MAX44009_INTERRUPT_ENABLE             0x01
+#define MAX44009_CONFIGURATION                0x02
+#define MAX44009_LUX_READING_HIGH             0x03
+#define MAX44009_LUX_READING_LOW              0x04
+#define MAX44009_THRESHOLD_HIGH               0x05
+#define MAX44009_THRESHOLD_LOW                0x06
+#define MAX44009_THRESHOLD_TIMER              0x07
 
 
 // CONFIGURATION MASKS
-#define MAX44009_CFG_CONTINUOUS     0x80
-#define MAX44009_CFG_MANUAL         0x40
-#define MAX44009_CFG_CDR            0x08
-#define MAX44009_CFG_TIMER          0x07
+#define MAX44009_CFG_CONTINUOUS               0x80
+#define MAX44009_CFG_MANUAL                   0x40
+#define MAX44009_CFG_CDR                      0x08
+#define MAX44009_CFG_TIMER                    0x07
 
 
 // ERROR CODES
-#define MAX44009_OK                     0
-#define MAX44009_ERROR_WIRE_REQUEST    -10
-#define MAX44009_ERROR_OVERFLOW        -20
-#define MAX44009_ERROR_HIGH_BYTE       -30
-#define MAX44009_ERROR_LOW_BYTE        -31
+#define MAX44009_OK                           0
+#define MAX44009_ERROR_WIRE_REQUEST           -10
+#define MAX44009_ERROR_OVERFLOW               -20
+#define MAX44009_ERROR_HIGH_BYTE              -30
+#define MAX44009_ERROR_LOW_BYTE               -31
 
 
 class Max44009

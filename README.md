@@ -5,9 +5,10 @@
 [![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/RobTillaart/MAX44009/blob/master/LICENSE)
 [![GitHub release](https://img.shields.io/github/release/RobTillaart/MAX44009.svg?maxAge=3600)](https://github.com/RobTillaart/MAX44009/releases)
 
+
 # MAX44009 I2C LUX sensor
 
-Library for MAX44009 / GY-49 I2C lux sensor
+Library for MAX44009 / GY-49 I2C lux sensor.
 
 
 ## Description
