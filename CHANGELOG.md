@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - refactor constructor around I2C interface (simpler)
 - remove **configure()**
 - update readme.md
+- update examples
 
 ----
 
