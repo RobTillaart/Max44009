@@ -10,12 +10,10 @@
 //          Made for ESP specific; does not work on UNO; 
 
 
-
-
 #include "Wire.h"
 #include "Max44009.h"
 
-// Don't begin I2C interface (Wire). Will be called in setup()
+//  Don't begin I2C interface (Wire). Will be called in setup()
 Max44009 myLuxA(MAX44009_DEFAULT_ADDRESS, &Wire);
 Max44009 myLuxB(MAX44009_ALT_ADDRESS, &Wire);
 Max44009 myLuxC(MAX44009_DEFAULT_ADDRESS, &Wire1);
@@ -49,5 +47,5 @@ void loop() {
 }
 
 
-// -- END OF FILE --
+//  -- END OF FILE --
 

@@ -18,8 +18,8 @@
 //  1 = 0x4B
 
 
-#include "Wire.h"
 #include "Max44009.h"
+
 
 Max44009 myLux(0x4A);
 
@@ -32,8 +32,10 @@ void setup()
   Serial.println(__FILE__);
   Serial.print("MAX44009_LIB_VERSION: ");
   Serial.println(MAX44009_LIB_VERSION);
+  Serial.println();
 
   Wire.begin();
+
   Wire.setClock(100000);
 }
 
@@ -46,11 +48,11 @@ void loop()
   {
     lastDisplay += interval;
     float lux = myLux.getLux();
-    int err = myLux.getError();
-    if (err != 0)
+    int error = myLux.getError();
+    if (error != 0)
     {
       Serial.print("Error:\t");
-      Serial.println(err);
+      Serial.println(error);
     }
     else
     {
@@ -61,4 +63,4 @@ void loop()
 }
 
 
-// -- END OF FILE --
+//  -- END OF FILE --
