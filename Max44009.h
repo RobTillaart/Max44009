@@ -5,7 +5,7 @@
 // VERSION: 0.6.1
 //    DATE: 2010-??-??
 // PURPOSE: library for MAX44009 lux sensor Arduino
-
+//     URL: https://github.com/RobTillaart/MAX44009
 
 
 //      breakout MAX44009 / GY-49
@@ -113,6 +113,7 @@ public:
   void    setManualMode(uint8_t CDR, uint8_t TIM);
   int     getCurrentDivisorRatio();  //  CDR 0/1
   int     getIntegrationTime();      //  TIM in ms (rounded)
+
 
   //  TEST the math
   float   convertToLux(uint8_t datahigh, uint8_t datalow);

@@ -192,7 +192,7 @@ bool Max44009::setThreshold(const uint8_t reg, const float value)
   if ((value < 0.0) || (value > MAX44009_MAX_LUX)) return false;
 
   //  compile time optimized.
-  uint32_t mantissa = round(value * (1.0 / MAX44009_MIN_LUX));     
+  uint32_t mantissa = round(value * (1.0 / MAX44009_MIN_LUX));
   uint8_t exponent = 0;
   while (mantissa > 255)
   {
@@ -210,7 +210,7 @@ float Max44009::getThreshold(uint8_t reg)
 {
   uint8_t datahigh = read(reg);
   //  0x08 = correction for lost bits
-  float lux = convertToLux(datahigh, 0x08);  
+  float lux = convertToLux(datahigh, 0x08);
   return lux;
 }
 

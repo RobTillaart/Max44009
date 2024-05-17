@@ -13,6 +13,7 @@
 #include "Wire.h"
 #include "Max44009.h"
 
+
 //  Don't begin I2C interface (Wire). Will be called in setup()
 Max44009 myLuxA(MAX44009_DEFAULT_ADDRESS, &Wire);
 Max44009 myLuxB(MAX44009_ALT_ADDRESS, &Wire);
@@ -28,6 +29,7 @@ void setup()
   Serial.println(__FILE__);
   Serial.print("MAX44009_LIB_VERSION: ");
   Serial.println(MAX44009_LIB_VERSION);
+  Serial.println();
 
   Wire.begin(19, 18);
   Wire1.begin(22, 23);

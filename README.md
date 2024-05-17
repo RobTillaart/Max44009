@@ -25,7 +25,7 @@ dynamic range from 0.045 lux to 188,000 lux.
 #### MAX44007
 
 The MAX44007 is an almost identical sensor that uses a step size of 0.025.
-This implies that this library is not useable 1 to 1 for the MAX44007, however some parts will work/
+This implies that this library is not useable 1 to 1 for the MAX44007, however some parts will work.
 
 
 #### Related

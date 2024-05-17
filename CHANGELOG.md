@@ -15,7 +15,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - update keywords.txt
 - minor edits.
 
-
 ## [0.6.0] - 2023-10-02
 - refactor constructor around I2C interface (simpler)
 - remove **configure()**
