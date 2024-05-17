@@ -3,6 +3,7 @@
 //  AUTHOR: Rob Tillaart
 // PURPOSE: demo of max44009 library
 //    DATE: 2015-08-06
+//     URL: https://github.com/RobTillaart/MAX44009
 //
 //      breakout MAX44009 / GY-49
 //

@@ -3,6 +3,7 @@
 //  AUTHOR: Moritz Ulmer
 // PURPOSE: demo of max44009 library
 //    DATE: 2020-01-19
+//     URL: https://github.com/RobTillaart/MAX44009
 //
 //    NOTE: To select the alternative I2C address on the GY-49 breakout board,
 //          the A0 pin has to be set to 3V3. It is soldered to GND by default.

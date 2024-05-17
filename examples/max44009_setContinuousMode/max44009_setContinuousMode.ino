@@ -2,6 +2,7 @@
 //    FILE: max44009_setContinuousMode.ino
 //  AUTHOR: Rob Tillaart
 // PURPOSE: demo of max44009 library
+//     URL: https://github.com/RobTillaart/MAX44009
 //
 //  note that lux values are repeated a number of times
 //  if read faster than the integration time.

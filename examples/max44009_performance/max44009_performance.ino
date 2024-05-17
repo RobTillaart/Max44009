@@ -2,6 +2,7 @@
 //    FILE: max44009_performance.ino
 //  AUTHOR: Rob Tillaart
 // PURPOSE: demo of max44009 library
+//     URL: https://github.com/RobTillaart/MAX44009
 //
 //  This measurement is indicative for the I2C speed
 //  It might be affected by the intensity.
